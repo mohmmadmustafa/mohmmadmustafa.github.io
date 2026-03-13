@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core shadcn tokens */
+    --background: 220 28% 8%;
+    --foreground: 210 20% 96%;
+
+    --card: 220 25% 12%;
+    --card-foreground: 210 20% 96%;
+
+    --popover: 220 25% 12%;
+    --popover-foreground: 210 20% 96%;
+
+    --primary: 38 95% 52%;
+    --primary-foreground: 220 28% 8%;
+
+    --secondary: 220 20% 18%;
+    --secondary-foreground: 210 20% 96%;
+
+    --muted: 220 20% 16%;
+    --muted-foreground: 215 15% 55%;
+
+    --accent: 220 20% 18%;
+    --accent-foreground: 210 20% 96%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 20% 96%;
+
+    --border: 220 15% 22%;
+    --input: 220 15% 22%;
+    --ring: 38 95% 52%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 220 28% 7%;
+    --sidebar-foreground: 215 15% 55%;
+    --sidebar-primary: 38 95% 52%;
+    --sidebar-primary-foreground: 220 28% 8%;
+    --sidebar-accent: 220 20% 14%;
+    --sidebar-accent-foreground: 210 20% 96%;
+    --sidebar-border: 220 15% 20%;
+    --sidebar-ring: 38 95% 52%;
+
+    /* Custom EMS Design Tokens */
+    --bg: 220 28% 7%;
+    --surface: 220 25% 11%;
+    --surface-dark: 220 28% 7%;
+    --surface-hover: 220 22% 15%;
+    --border-strong: 220 15% 20%;
+    --text-muted: 215 15% 52%;
+    --brand: 38 95% 52%;
+    --brand-hover: 38 95% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", system-ui, sans-serif;
+  }
+
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  select option {
+    background-color: hsl(220, 25%, 11%);
+    color: white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(220, 28%, 7%);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(220, 15%, 25%);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(220, 15%, 35%);
+  }
+}
